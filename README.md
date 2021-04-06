@@ -7,7 +7,6 @@ A Laravel 6 Single Page Application boilerplate using Vue.js 2.6, GraphQL, Boots
 * Authentication using JWT.
 * WebSockets with Laravel Echo and Pusher.
 * Vue component tests using Jest and API tests using PHPUnit.
-* Already configured to run tests on Docker, Travis CI, AppVeyor and VSTS CI on Windows, Linux and macOS.
 * Dockerfile configured with PHP 7.2, Node.js 12 and Composer, with MySQL and phpMyAdmin on Docker Compose.
 
 ## Main dependencies
@@ -41,23 +40,22 @@ Back-end:
 * [PHPUnit](https://github.com/sebastianbergmann/phpunit)
 * [Laravel Envoy](https://github.com/laravel/envoy)
 
-## Steps to run it:
+## Steps to run it
 
-Remember to search for "TODO change" on the files to change example code.
-
-### With Docker
+### Docker
 
 Run:
 
     docker-compose up --build
 
-After it starts, just on the first time, run on another terminal:
+Just on the first time, after it starts run on another terminal:
 
-    docker exec laravel6-vuejs-kickstarter bash -c "composer update && composer start && npm update && npm start"
+    docker exec laravel6-vuejs-kickstarter bash -c "composer update && composer start"
+    docker exec laravel6-vuejs-kickstarter bash -c "npm update && npm start"
 
 The application will be available on http://localhost:8080 and the phpMyAdmin on http://localhost:8081
 
-### Common way
+### Manual
 
 Rename the .env.example file to .env, and fill it with your local info, then:
 
